@@ -2,6 +2,7 @@
 https://rmauro.dev/jwt-authentication-with-csharp-dotnet/<br/>
 https://rmauro.dev/csharp-get-jwt-token-request/<br/>
 https://faun.pub/asp-net-core-jwt-authentication-middleware-reading-a-jwt-14cdb32e39ca<br/>
+https://www.youtube.com/watch?v=6DWJIyipxzw&t=74s<br/>
 
 # NUNIT
 https://www.allhandsontech.com/programming/dotnet/unit-testing-dotnet-cli/<br/>
