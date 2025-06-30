@@ -4,6 +4,7 @@ https://rmauro.dev/csharp-get-jwt-token-request/<br/>
 https://faun.pub/asp-net-core-jwt-authentication-middleware-reading-a-jwt-14cdb32e39ca<br/>
 https://www.youtube.com/watch?v=6DWJIyipxzw&t=74s<br/>
 https://www.youtube.com/watch?v=3XoXzEPHdTA<br/>
+https://akashjwork.medium.com/mastering-jwt-authorization-in-asp-net-core-7-with-automation-for-clean-code-and-efficiency-4259647de025<br/>
 
 # NUNIT
 https://www.allhandsontech.com/programming/dotnet/unit-testing-dotnet-cli/<br/>
