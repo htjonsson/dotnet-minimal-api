@@ -1,3 +1,11 @@
+# CORE 10
+https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-10.0.103-macos-x64-installer
+
+# SERILOG
+https://nblumhardt.com/2024/04/serilog-net8-0-minimal/ <br/>
+https://github.com/serilog/serilog-aspnetcore#serilogaspnetcore--- <br/>
+
+
 # JWT
 https://rmauro.dev/jwt-authentication-with-csharp-dotnet/<br/>
 https://rmauro.dev/csharp-get-jwt-token-request/<br/>
