@@ -3,6 +3,7 @@ using Api.Database;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
+using Scalar.AspNetCore;
 
 // SERILOG
 Log.Logger = new LoggerConfiguration()
@@ -26,13 +27,7 @@ try
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
     // OPENAPI
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddOpenApiDocument(config =>
-    {
-        config.DocumentName = "Books API";
-        config.Title = "Books API v1";
-        config.Version = "v1";
-    });
+    builder.Services.AddOpenApi();
 
     var app = builder.Build();
 
@@ -41,17 +36,26 @@ try
 
     if (app.Environment.IsDevelopment())
     {
-        app.UseOpenApi();
-        app.UseSwaggerUi(config =>
+        app.MapOpenApi();
+
+        // /swagger/index.html#/
+        app.UseSwaggerUI(options =>
         {
-            config.DocumentTitle = "Books API";
-            config.Path = "/swagger";
-            config.DocumentPath = "/swagger/{documentName}/swagger.json";
-            config.DocExpansion = "list";
+           options.SwaggerEndpoint(url: "/openapi/v1.json", name: "OpenAPI V1");
         });
+
+        // /api-docs/index.html#/
+        app.UseReDoc(options =>
+        {
+            options.SpecUrl("/openapi/v1.json");
+        });
+
+        // /scalar/index.html
+        app.MapScalarApiReference();
     }
 
     // APIENDPOINTS
+    BaseEndpoints.Map(app);
     BookEndpoints.Map(app);
 
     app.Run();

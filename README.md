@@ -1,5 +1,6 @@
 # CORE 10
-https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-10.0.103-macos-x64-installer
+https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-10.0.103-macos-x64-installer <br/>
+https://www.c-sharpcorner.com/article/openapi-minimal-apis-in-asp-net-core-10-0/ <br/>
 
 # SERILOG
 https://nblumhardt.com/2024/04/serilog-net8-0-minimal/ <br/>
