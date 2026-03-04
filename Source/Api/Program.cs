@@ -23,7 +23,8 @@ try
     builder.Logging.AddSerilog();
 
     // DATABASE 
-    builder.Services.AddDbContext<BookContext>(opt => opt.UseInMemoryDatabase("BookLibrary"));
+    builder.Services.AddDbContext<InMemoryContext>(opt => opt.UseInMemoryDatabase("InMemory"));
+    builder.Services.AddDbContext<SqliteContext>();
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
     // OPENAPI

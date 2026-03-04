@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api.Database
 {
-    public class BookContext : DbContext
+    public class InMemoryContext : DbContext
     {
-        public BookContext(DbContextOptions<BookContext> options)
+        public InMemoryContext(DbContextOptions<InMemoryContext> options)
         : base(options) 
         { }
 
