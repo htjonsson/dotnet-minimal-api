@@ -58,6 +58,7 @@ try
     // APIENDPOINTS
     BaseEndpoints.Map(app);
     BookEndpoints.Map(app);
+    ImageEndpoints.Map(app);
 
     app.Run();
 

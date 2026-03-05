@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,7 +33,6 @@ internal static class BaseEndpoints
         {
             operation.Summary     = "Gets the current weather report.";
             operation.Description = "Returns a short description and emoji.";
-            operation.Deprecated  = true;
             return Task.CompletedTask;
         });
 
