@@ -14,6 +14,11 @@ public class Canvas
         return Encoding.UTF8.GetBytes(_stringBuilder.ToString());
     }
 
+    public string GetString()
+    {
+        return _stringBuilder.ToString();
+    }
+
     public void Begin(int width, int height, string style)
     {
         _stringBuilder.Clear();
@@ -67,6 +72,11 @@ public class Canvas
         _stringBuilder.AppendLine($"<rect x=\"{x}\" y=\"{y}\" width=\"{width}\" height=\"{height}\" class=\"{className}\"/>");
     }
 
+    public void RoundRectangle(int x, int y, int width, int height, int cornerRadius, string className)
+    {
+        _stringBuilder.AppendLine($"<rect x=\"{x}\" y=\"{y}\" width=\"{width}\" height=\"{height}\" rx=\"{cornerRadius}\" ry=\"{cornerRadius}\" class=\"{className}\"/>");
+    }    
+
     public void Line(int x1, int y1, int x2, int y2, string className)
     {
         _stringBuilder.AppendLine($"<line x1=\"{x1}\" y1=\"{y1}\" x2=\"{x2}\" y2=\"{y2}\" class=\"{className}\"/>");
@@ -75,6 +85,11 @@ public class Canvas
     public void Text(int x, int y, string text, string className)
     {
        _stringBuilder.AppendLine($"<text x=\"{x}\" y=\"{y}\" class=\"{className}\">{text}</text>");
+    }
+
+    public void Circle(int x, int y, int radius, string className)
+    {
+        _stringBuilder.AppendLine($"<circle cx=\"{x}\" cy=\"{y}\" r=\"{radius}\" class=\"{className}\" />");
     }
 
     public void Comment(string comment)

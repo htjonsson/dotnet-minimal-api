@@ -35,6 +35,22 @@ internal static class ImageEndpoints
         .WithName($"GetImage")
         .WithTags(Tag);
 
+        // BUILD
+        route.MapGet("image/{fileName}", async (string fileName) => 
+        {
+            ImageBuilder builder = new ();
+
+            ImageModel result = new ();
+
+            result.Image = builder.buildSimpleDemo();
+
+            return Results.Ok(result);
+        })
+        .Produces(StatusCodes.Status200OK)
+        .Produces(StatusCodes.Status404NotFound)
+        .WithName($"BuildImage")
+        .WithTags(Tag);        
+
         return builder;
     }
 }
